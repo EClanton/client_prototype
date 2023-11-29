@@ -1,0 +1,302 @@
+  <! DOCTYPE html>
+
+<html>
+    
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+    
+    <head>
+    
+    <title> Casebook Prototype </title>
+    
+    <style> 
+        
+    
+        h1{background-color: #636363; text-align: left;padding-left: 20px;color: cornsilk; border: double 10px; border-color: cornsilk}
+        
+        h1 {
+  text-shadow: -3px 2px #ff0000; 
+}
+        
+         a:link{color: #636363}
+        a:visited{color: #636363}
+        a:hover{color: #ff0000} 
+        
+        
+        * {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #474e5d;
+  font-family: Helvetica, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+    
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #ff0000;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+}
+        
+        
+        
+        </style>
+    
+        <link rel="stylesheet" href="css/clientprototype.css">
+    
+    </head>
+    
+    <body>
+    
+       <h1 style="font-size: 60px"> <p><img src="images/Untitled_Artwork%202.jpg" alt="Vintage Video Camera" style="float: right; width: 340px; height: 333px;padding-right: 20px"></p>Interior <br> Chinatown: <p style="font-size: 40px;padding-top: -10px">A Critical Casebook</p> <br></h1>
+        
+      
+        
+         <div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="critical-essays.html">Critical Essays</a>
+  <a href="contributors.html">Contributors</a>
+    <div class="dropdown">
+    <button class="dropbtn">Asian American Historical Timeline 
+      <i class="fa fa-caret-down"></i>
+    </button>
+      <div class="dropdown-content">
+      <a href="asian-american-timeline.html">1840s-1920s</a>
+      <a href="1930s.html">1930s-1980s(blank)</a>
+      <a href="1980s.html">1980s-Present Day(blank)</a>
+    </div>
+  </div> 
+</div>
+    
+   <h2 style="text-align: center;font-size: 40px; text-shadow: -3px 2px  #ff0000;color: cornsilk; border: double 8px; border-color: #636363"> Asian American Timeline: 1840s-1920s</h2>
+        
+        <h3 style="text-align: center;padding:30px;color: #636363">“We’ve been here two hundred years. The first Chinese came in 1815. Germans and Dutch and Irish and Italians who came at the turn of the twentieth century. They’re Americans. Why doesn’t this face register as American?” (Charles Yu, Interior Chinatown)
+</h3>
+        
+        <div class="timeline">
+  <div class="container left">
+    <div class="content">
+      <h2> 1843 </h2>
+      <p >A 14 year old fisherman named Manjiro becomes the first U.S Japanese immigrant.<br> <img src="images/asians-america/Manjiro%20First%20Japanese%20Immigrant.JPG" style="width: 180px; height: 190px;float: right;border: double 8px; border-color: #636363;"><p/>
+          
+    </div>
+  </div>
+             
+
+  <div class="container right">
+    <div class="content">
+      <h2> 1850 </h2>
+      <p>California imposes the Foreign Miners Tax. It is enforced mostly against Chinese miners, who were often forced to pay more. </p>
+    </div>
+  </div>
+                            
+
+  <div class="container left">
+    <div class="content">
+      <h2> 1854 </h2>
+      <p> People v. Hall determined that Chinese people cannot defend against white defendants. </p>
+    </div>
+  </div>
+                                          
+
+  <div class="container right">
+    <div class="content">
+      <h2> 1875 </h2>
+      <p></p>The Page Act was enacted on March 3, 1875.<br><br> The Page Act prohibited the recruitment of laborers from “China, Japan, or any Oriental Country” who were coerced or women brought for immoral purposes.<p/> <a href="https://immigrationhistory.org/item/page-act/"target="_blank">Click here for more information on the Page Act</a>
+        </div>
+    </div>
+
+  <div class="container left">
+    <div class="content">
+      <h2> May 6, 1882 </h2>
+      <p> Chinese immigrants are targeted by congress with the passing of the Chinese Exclusion Act, signed into law by President Chester Arthur.<br><br> The Chinese Exclusion prohibited the immigration of Chinese laborers for 10 years. The law excluded merchants, teachers, students, and diplomats. When the Exclusion Act expired in 1892, Congress added an extension through the Geary Act. The extension was made permanent in 1902 and required each Chinese resident to register and obtain a certificate of residence </p><a href="https://www.archives.gov/milestone-documents/chinese-exclusion-act"target="_blank">Click here for more information on the Chinese Exclusion Act</a>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2> May 27-28, 1887 </h2>
+      <p> Rock Springs Massacre:<br><br>Seven white horse thieves ambush a group of Chinese miners who set up camp along the Snake River in Oregon. The thieves murdered all 34 men and mutilated their bodies before dumping them in the river. Three members of the gang stood on trial and were found not guilty by an all-white jury. </p> <img src="images/asians-america/rock%20springs%20massacre.JPG" style= "width: 190px; height: 200px;float: right;border: double 8px; border-color: #636363;"> 
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2> 1896 </h2>
+      <p > Bubonic Plague Scare in Honolulu: Chinatown Burned<br><br>After a shopkeeper in Honolulu’s Chinatown is diagnosed with the Bubonic Plague, the Territory of Hawaii’s Board of Health declares a state of emergency as more cases are identified. As a result, city officials decided to set fire to infected homes and businesses. The flames eventually grew out of control and left 38 acres of Chinatown burned. <p/>
+          
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2> March 28, 1898 </h2>
+      <p> Wong Kim Ark v. U.S. decides that Chinese born in the U.S. cannot be stripped of their citizenship.<br><br> One of the most far-reaching cases in immigration law, the Supreme Court ruled for the first time that 14th Amendment to the Constitution applied to all people born in the United States "regardless of race or color." Thus, Wong Kim Ark, who was born in the U.S., was considered a citizen by birth and could not be prevented from returning to live in America after a trip to China. </p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2> 1904 </h2>
+      <p> Chinese Exclusion Act made indefinite.  </p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2> 1907 </h2>
+      <p> President Theodore Roosevelt signs Executive Order 589 prohibiting Japanese. </p>
+        </div>
+    </div>
+
+  <div class="container left">
+    <div class="content">
+      <h2> 1910 </h2>
+      <p> Angel Island opens in San Francisco Bay, serving as the country’s major point of entry for Asian immigrants. </p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2> February 5, 1917 </h2>
+      <p> Congress passes the Immigration Act of 1917. <br><br> Also known as the Asiatic Barred Zone, this act was intended to prevent “undesirables” from immigrating to the US. The act primarily targeted individuals migrating from Asia.  </p>
+    </div>
+  </div>
+         <div class="container left">
+    <div class="content">
+      <h2> 1922 </h2>
+      <p> <i>Takao Ozawa v. U.S.</i> declares Japanese ineligible for naturalized citizenship. </p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2> 1928 </h2>
+      <p> Filipino farm workers are driven out of Yakima Valley, Washington. </p>
+    </div>
+  </div>
+              </div>
+        
+        <br>
+        
+    <h3 style="text-align: center;font-size: 40px"> <a href="1930s.html">1930s-1980s Timeline</a></h3>
+        
+
+        
+        <footer style="padding: 20px; font-size: 20px; text-align: center; border: double 8px; border-color: #636363;background-color: cornsilk">© Millikin 2023 ∣ EN 202 ∣ Site Designed by EN 305</footer>
+
+    
+    </body>
